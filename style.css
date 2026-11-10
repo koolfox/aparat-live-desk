@@ -7,3 +7,9 @@
 .quick-guide{background:#eaf2e9;border:1px solid #d6e5d7;border-radius:12px;margin-bottom:26px;padding:14px 18px;color:#344b3a}.quick-guide summary{font-weight:bold;cursor:pointer}.quick-guide li,.quick-guide p{line-height:2;font-size:12px}.quick-guide p{margin-bottom:0}
 
 header a.textbtn{text-decoration:none;white-space:nowrap}.guide-note{padding-top:10px;border-top:1px solid #cdded0;margin-top:12px}.guide-note p{margin:6px 0;color:#42564a}footer{margin-top:50px;padding:24px 0;border-top:1px solid #dfe5df;display:flex;justify-content:space-between;gap:15px;color:#58685c;font-size:12px}footer a{color:#365f46;text-decoration:none}.heart{color:#c75e4a}@media(max-width:560px){header a.textbtn{font-size:10px}footer{flex-direction:column;align-items:center}}
+
+.classroom select,.sidecard select{font-size:12px}.classroom input[type=checkbox]{display:inline;width:auto;margin:0 0 0 8px}.classroom label{line-height:1.7}.tool-actions{display:flex;gap:8px;flex-wrap:wrap}.tool-actions button{font-size:11px}#preflight{padding-right:20px;color:#53655a;font-size:12px;line-height:2}#teacherTimer{text-align:right;font-variant-numeric:tabular-nums}.shortcut-row{display:flex;gap:6px;align-items:center;margin:8px 0}.shortcut-row select{margin:0;min-width:0;flex:1}.shortcut-row button{white-space:nowrap}.classroom .outlinebtn{font-size:11px;padding:10px}#breakNow{width:100%}
+
+header{position:sticky;top:0;z-index:4}
+
+.shortcut-row select.shortcut-key{flex:0 0 58px;width:58px;padding:8px 2px}
