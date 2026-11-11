@@ -1,0 +1,25 @@
+name: test
+on:
+  pull_request:
+  push:
+    branches: ['claude/**', 'codex/**']
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Unit tests
+        run: node --test tests/*.test.mjs
+      - name: Syntax of every module
+        run: for f in *.js; do node --check "$f"; done
+      - name: Every element the code uses exists exactly once in the page
+        run: |
+          grep -o -E "\\\$\('[A-Za-z0-9_-]+'\)" app.js | sed -E "s/.*'(.*)'.*/\1/" | sort -u > js.txt
+          grep -o -E 'id="[A-Za-z0-9_-]+"' index.html | sed -E 's/id="(.*)"/\1/' | sort > html.txt
+          missing=$(comm -23 js.txt <(sort -u html.txt)); dups=$(uniq -d html.txt)
+          [ -z "$missing$dups" ] || { echo "missing: $missing dups: $dups"; exit 1; }

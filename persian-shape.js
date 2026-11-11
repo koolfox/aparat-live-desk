@@ -1,0 +1,5 @@
+// OBS FreeType renders glyphs without Arabic shaping or bidirectional layout.
+// Only the fixed, non-sensitive overlay labels use these presentation forms.
+const forms={
+ 'ا':['ﺍ','ﺎ'], 'ب':['ﺏ','ﺐ','ﺑ','ﺒ'], 'ت':['ﺕ','ﺖ','ﺗ','ﺘ'], 'ث':['ﺙ','ﺚ','ﺛ','ﺜ'], 'ج':['ﺝ','ﺞ','ﺟ','ﺠ'], 'چ':['ﭺ','ﭻ','ﭼ','ﭽ'], 'ح':['ﺡ','ﺢ','ﺣ','ﺤ'], 'خ':['ﺥ','ﺦ','ﺧ','ﺨ'], 'د':['ﺩ','ﺪ'], 'ر':['ﺭ','ﺮ'], 'ز':['ﺯ','ﺰ'], 'ژ':['ﮊ','ﮋ'], 'س':['ﺱ','ﺲ','ﺳ','ﺴ'], 'ش':['ﺵ','ﺶ','ﺷ','ﺸ'], 'ص':['ﺹ','ﺺ','ﺻ','ﺼ'], 'ض':['ﺽ','ﺾ','ﺿ','ﻀ'], 'ط':['ﻁ','ﻂ','ﻃ','ﻄ'], 'ظ':['ﻅ','ﻆ','ﻇ','ﻈ'], 'ع':['ﻉ','ﻊ','ﻋ','ﻌ'], 'غ':['ﻍ','ﻎ','ﻏ','ﻐ'], 'ف':['ﻑ','ﻒ','ﻓ','ﻔ'], 'ق':['ﻕ','ﻖ','ﻗ','ﻘ'], 'ک':['ﮎ','ﮏ','ﮐ','ﮑ'], 'گ':['ﮒ','ﮓ','ﮔ','ﮕ'], 'ل':['ﻝ','ﻞ','ﻟ','ﻠ'], 'م':['ﻡ','ﻢ','ﻣ','ﻤ'], 'ن':['ﻥ','ﻦ','ﻧ','ﻨ'], 'ه':['ﻩ','ﻪ','ﻫ','ﻬ'], 'و':['ﻭ','ﻮ'], 'ی':['ﯼ','ﯽ','ﯾ','ﯿ']};
+export function shapePersian(text){const chars=Array.from(text);const shaped=chars.map((c,i)=>{const f=forms[c];if(!f)return c;const prev=forms[chars[i-1]],next=forms[chars[i+1]];const joinsPrev=Boolean(prev&&prev.length===4);const joinsNext=Boolean(next&&f.length===4);return f[joinsPrev?(joinsNext?3:1):(joinsNext?2:0)]});return shaped.reverse().join('')}
