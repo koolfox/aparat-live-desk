@@ -1,4 +1,4 @@
-import {shapePersian} from './persian-shape.js';
+import {shapePersian} from './persian-shape.js?v=20261111b';
 export async function createWaitingScene(obs,audioPath=''){
  const suffix=crypto.randomUUID().slice(0,8),sceneName=`Waiting room ${suffix}`,background=`Waiting background ${suffix}`,title=`Waiting title ${suffix}`,music=`Waiting music ${suffix}`;
  const v=await obs.request('GetVideoSettings'),k=(await obs.request('GetInputKindList')).inputKinds,platform=(await obs.request('GetVersion')).platform;
