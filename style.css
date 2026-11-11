@@ -11,3 +11,9 @@ header a.textbtn{text-decoration:none;white-space:nowrap}.guide-note{padding-top
 .window-preview{position:relative;aspect-ratio:16/9;display:grid;place-items:center;overflow:hidden;text-align:center;background:#1c2928;color:#c0d1c6;border-radius:10px;font-size:12px}.window-preview img{width:100%;height:100%;object-fit:contain}.window-actions{gap:8px;flex-wrap:wrap}.window-actions button{font-size:12px}.window-actions button:disabled{opacity:.45;cursor:not-allowed}#windowDialog{max-height:90vh;overflow:auto}
 
 .source-actions{display:flex;gap:8px;flex-wrap:wrap}#sourceDialog{max-height:90vh;overflow:auto}
+
+.classroom select,.sidecard select{font-size:12px}.classroom input[type=checkbox]{display:inline;width:auto;margin:0 0 0 8px}.classroom label{line-height:1.7}.tool-actions{display:flex;gap:8px;flex-wrap:wrap}.tool-actions button{font-size:11px}#preflight{padding-right:20px;color:#53655a;font-size:12px;line-height:2}#teacherTimer{text-align:right;font-variant-numeric:tabular-nums}.shortcut-row{display:flex;gap:6px;align-items:center;margin:8px 0}.shortcut-row select{margin:0;min-width:0;flex:1}.shortcut-row button{white-space:nowrap}.classroom .outlinebtn{font-size:11px;padding:10px}#breakNow{width:100%}
+
+header{position:sticky;top:0;z-index:4}
+
+.shortcut-row select.shortcut-key{flex:0 0 58px;width:58px;padding:8px 2px}
