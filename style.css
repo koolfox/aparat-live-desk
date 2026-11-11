@@ -19,3 +19,5 @@ header{position:sticky;top:0;z-index:4}
 .shortcut-row select.shortcut-key{flex:0 0 58px;width:58px;padding:8px 2px}
 
 #mediaDialog{max-height:90vh;overflow:auto}.sidecard #mediaOpen,.sidecard #mediaRemove{margin-bottom:10px}.sidecard .tool-actions{margin:12px 0}#mediaError{color:#a74135}
+
+.vault{border:1px solid #d9e1da;border-radius:10px;padding:14px;margin:16px 0}.vault summary{cursor:pointer;font-weight:bold;color:#315841}.vault p{line-height:1.8}.vault label{margin:12px 0}.vault-actions{display:flex;gap:8px;flex-wrap:wrap}.vault-actions button{font-size:11px;padding:10px}#vaultStatus{color:#315841;font-weight:bold}#vaultStatus.error{color:#a74135}
