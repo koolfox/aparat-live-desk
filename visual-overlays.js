@@ -1,4 +1,4 @@
-import {withTemporaryPreview} from './window-capture.js';
+import {withTemporaryPreview} from './window-capture.js?v=20261111b';
 export async function prepareMedia(obs,kind,path){
  if(!['image','video'].includes(kind))throw Error('نوع فایل نامعتبر است.');
  const sceneName=`Overlay preview ${crypto.randomUUID().slice(0,8)}`,inputName=`Overlay media ${crypto.randomUUID().slice(0,8)}`;await obs.request('CreateScene',{sceneName});

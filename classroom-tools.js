@@ -1,4 +1,4 @@
-import {shapePersian} from './persian-shape.js';
+import {shapePersian} from './persian-shape.js?v=20261111b';
 export function formatClock(seconds){const s=Math.max(0,Math.floor(seconds));return `${String(Math.floor(s/3600)).padStart(2,'0')}:${String(Math.floor(s/60)%60).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`}
 export async function addViewerOverlay(obs,sceneName,label){
  const version=await obs.request('GetVersion');const kinds=(await obs.request('GetInputKindList')).inputKinds;
