@@ -9,3 +9,5 @@
 header a.textbtn{text-decoration:none;white-space:nowrap}.guide-note{padding-top:10px;border-top:1px solid #cdded0;margin-top:12px}.guide-note p{margin:6px 0;color:#42564a}footer{margin-top:50px;padding:24px 0;border-top:1px solid #dfe5df;display:flex;justify-content:space-between;gap:15px;color:#58685c;font-size:12px}footer a{color:#365f46;text-decoration:none}.heart{color:#c75e4a}@media(max-width:560px){header a.textbtn{font-size:10px}footer{flex-direction:column;align-items:center}}
 
 .vault{border:1px solid #d9e1da;border-radius:10px;padding:14px;margin:16px 0}.vault summary{cursor:pointer;font-weight:bold;color:#315841}.vault p{line-height:1.8}.vault label{margin:12px 0}.vault-actions{display:flex;gap:8px;flex-wrap:wrap}.vault-actions button{font-size:11px;padding:10px}#vaultStatus{color:#315841;font-weight:bold}#vaultStatus.error{color:#a74135}
+
+.tool-actions{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.tool-actions .outlinebtn{font-size:12px}#aparatError{color:#a74135}#aparatDialog{max-height:90vh;overflow:auto}
